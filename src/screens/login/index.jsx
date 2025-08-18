@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   TextInput,
   StyleSheet,
+  Image,
 } from 'react-native';
 import styles from './styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -20,6 +21,11 @@ const Login = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Image
+        source={require('@assets/images/login.png')} // Replace with your image path
+        style={styles.backgroundImage}
+        resizeMode="cover"
+      />
       <View style={styles.body}>
         {/* Title */}
         <Text style={styles.title}>Login Account</Text>
@@ -109,7 +115,7 @@ const Login = () => {
 
         {/* Register */}
         <View style={styles.footerBottom}>
-          <Text style={{ color: '#444' }}>Not a member? </Text>
+          <Text style={styles.notMember}>Not a member? </Text>
           <TouchableOpacity>
             <Text style={styles.registerText}>Register Now</Text>
           </TouchableOpacity>
