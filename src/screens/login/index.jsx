@@ -1,0 +1,122 @@
+// src/screens/login/index.jsx
+import React, { useState } from 'react';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  TextInput,
+  StyleSheet,
+} from 'react-native';
+import styles from './styles';
+import { SafeAreaView } from 'react-native-safe-area-context';
+// import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import VectorIcon from '@src/utils/VectoreIcons';
+
+// import { Octicons } from 'react-native-vector-icons';
+
+const Login = () => {
+  const [activeTab, setActiveTab] = useState('mobile'); // 'email' or 'mobile'
+  const [showPassword, setShowPassword] = useState(false);
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.body}>
+        {/* Title */}
+        <Text style={styles.title}>Login Account</Text>
+        <Text style={styles.subtitle}>Hello, welcome back to our account</Text>
+
+        {/* <Octicons name="home" size={24} color="#6848FF" /> */}
+        {/* Tabs */}
+        <View style={styles.tabContainer}>
+          <TouchableOpacity
+            style={[styles.tab, activeTab === 'email' && styles.activeTab]}
+            onPress={() => setActiveTab('email')}
+          >
+            <Text
+              style={[
+                styles.tabText,
+                activeTab === 'email' && styles.activeTabText,
+              ]}
+            >
+              Email
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.tab, activeTab === 'mobile' && styles.activeTab]}
+            onPress={() => setActiveTab('mobile')}
+          >
+            <Text
+              style={[
+                styles.tabText,
+                activeTab === 'mobile' && styles.activeTabText,
+              ]}
+            >
+              Mobile
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Input Fields */}
+        {activeTab === 'mobile' ? (
+          <TextInput
+            style={styles.input}
+            placeholder="+44 |"
+            placeholderTextColor="#999"
+            keyboardType="phone-pad"
+          />
+        ) : (
+          <TextInput
+            style={styles.input}
+            placeholder="Enter Email"
+            placeholderTextColor="#999"
+            keyboardType="email-address"
+          />
+        )}
+
+        {/* Password */}
+        <View style={styles.passwordContainer}>
+          <TextInput
+            style={styles.passwordInput}
+            placeholder="Enter Password"
+            placeholderTextColor="#999"
+            secureTextEntry={!showPassword}
+          />
+          <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+            {/* <Icon
+              name={showPassword ? 'eye' : 'eye-off'}
+              size={22}
+              color="#555"
+            /> */}
+            <VectorIcon
+              icon="Ionicons"
+              size={24}
+              name="eye"
+              color={'#6B48FF'}
+            />
+          </TouchableOpacity>
+        </View>
+
+        {/* Forgot Password */}
+        <TouchableOpacity style={styles.forgotWrap}>
+          <Text style={styles.forgotText}>Forget Password?</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.footer}>
+        <TouchableOpacity style={styles.signInBtn}>
+          <Text style={styles.signInText}>Sign in</Text>
+        </TouchableOpacity>
+
+        {/* Register */}
+        <View style={styles.footerBottom}>
+          <Text style={{ color: '#444' }}>Not a member? </Text>
+          <TouchableOpacity>
+            <Text style={styles.registerText}>Register Now</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </SafeAreaView>
+  );
+};
+
+export default Login;

@@ -4,17 +4,23 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import HomeScreen from '@screens/HomeScreen';
-import ScreenOne from '@screens/ScreenOne';
-import ScreenTwo from '@screens/ScreenTwo';  
-import ScreenThree from '@screens/ScreenThree';
-import ScreenFour from '@screens/ScreenFour';
+import HomeScreen from '@screens/homeScreen';
+import ScreenOne from '@screens/screenOne';
+import ScreenTwo from '@screens/screenTwo';
+import ScreenThree from '@screens/screenThree';
+import ScreenFour from '@screens/screenFour';
 
- 
+import Login from '@screens/login';
 
 function DetailsScreen() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View
+      style={{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
       <Text>Details Screen</Text>
     </View>
   );
@@ -45,16 +51,42 @@ function TabNavigator() {
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home"
+      <Drawer.Navigator
+        initialRouteName="Home"
         screenOptions={{
           headerTitle: 'MintPay OTC', // This is the header title for all screens
         }}
       >
-        <Drawer.Screen name="Home" component={TabNavigator} options={{ drawerLabel: 'Home', headerTitle: 'Home' }} />
-        <Drawer.Screen name="ScreenOne" component={ScreenOne} options={{ drawerLabel: 'Screen One', headerTitle: 'Screen One' }} />
-        <Drawer.Screen name="ScreenTwo" component={ScreenTwo} options={{ drawerLabel: 'Screen two', headerTitle: 'Screen Two' }} />
-        <Drawer.Screen name="ScreenThree" component={ScreenThree} options={{ drawerLabel: 'Screen three', headerTitle: 'Screen Three' }} />
-        <Drawer.Screen name="ScreenFour" component={ScreenFour} options={{ drawerLabel: 'Screen four', headerTitle: 'Screen Four' }} />
+        <Drawer.Screen
+          name="Home"
+          component={TabNavigator}
+          options={{ drawerLabel: 'Home', headerTitle: 'Home' }}
+        />
+        <Drawer.Screen
+          name="Login"
+          component={Login}
+          options={{ drawerLabel: 'Login', headerTitle: 'Login' }}
+        />
+        <Drawer.Screen
+          name="ScreenOne"
+          component={ScreenOne}
+          options={{ drawerLabel: 'Screen One', headerTitle: 'Screen One' }}
+        />
+        <Drawer.Screen
+          name="ScreenTwo"
+          component={ScreenTwo}
+          options={{ drawerLabel: 'Screen two', headerTitle: 'Screen Two' }}
+        />
+        <Drawer.Screen
+          name="ScreenThree"
+          component={ScreenThree}
+          options={{ drawerLabel: 'Screen three', headerTitle: 'Screen Three' }}
+        />
+        <Drawer.Screen
+          name="ScreenFour"
+          component={ScreenFour}
+          options={{ drawerLabel: 'Screen four', headerTitle: 'Screen Four' }}
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   );
