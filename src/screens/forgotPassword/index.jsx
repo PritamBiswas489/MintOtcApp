@@ -16,7 +16,7 @@ import appColors from '@src/theme/appColors';
 
 // import { Octicons } from 'react-native-vector-icons';
 
-const Login = () => {
+const ForgotPassword = () => {
   const [activeTab, setActiveTab] = useState('mobile'); // 'email' or 'mobile'
   const [showPassword, setShowPassword] = useState(false);
 
@@ -121,4 +121,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgotPassword;

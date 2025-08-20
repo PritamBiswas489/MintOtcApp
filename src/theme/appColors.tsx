@@ -11,6 +11,7 @@ const appColors = {
   success: '#0CBC8B',
   border: '#f4f6f9',
   textInput: '#F7F8F8',
+  textInput_2: '#F5F5F5',
   modal: 'rgba(0, 0, 0, 0.5)',
   whiteTransparent: 'rgba(255, 255, 255, 0.9)',
 

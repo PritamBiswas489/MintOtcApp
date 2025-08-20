@@ -11,6 +11,9 @@ import ScreenThree from '@screens/screenThree';
 import ScreenFour from '@screens/screenFour';
 
 import Login from '@screens/login';
+import Register from '@screens/register';
+import AccountVerification from '@screens/accountVerification';
+import ForgotPassword from '@screens/forgotPassword';
 
 function DetailsScreen() {
   return (
@@ -66,6 +69,28 @@ export default function App() {
           name="Login"
           component={Login}
           options={{ drawerLabel: 'Login', headerTitle: 'Login' }}
+        />
+
+        <Drawer.Screen
+          name="AccountVerification"
+          component={AccountVerification}
+          options={{
+            drawerLabel: 'AccountVerification',
+            headerTitle: 'AccountVerification',
+          }}
+        />
+        <Drawer.Screen
+          name="Register"
+          component={Register}
+          options={{ drawerLabel: 'Register', headerTitle: 'Register' }}
+        />
+        <Drawer.Screen
+          name="ForgotPassword"
+          component={ForgotPassword}
+          options={{
+            drawerLabel: 'ForgotPassword',
+            headerTitle: 'ForgotPassword',
+          }}
         />
         <Drawer.Screen
           name="ScreenOne"
