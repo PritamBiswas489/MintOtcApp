@@ -1,6 +1,7 @@
 import appColors from '@src/theme/appColors';
 import appFonts from '@src/theme/appFonts';
 import { StyleSheet } from 'react-native';
+import { SW, SH, SF } from '@src/theme/dimensions';
 
 const styles = StyleSheet.create({
   container: {
@@ -12,8 +13,8 @@ const styles = StyleSheet.create({
 
   body: {
     flex: 1,
-    padding: 20,
-    // backgroundColor: '#f00',
+    paddingVertical: SW(30),
+    paddingHorizontal: SW(20),
   },
   backgroundImage: {
     // flex: 1,
@@ -25,35 +26,24 @@ const styles = StyleSheet.create({
     top: 0,
   },
 
-  title: {
-    fontSize: 22,
-    fontFamily: appFonts.PoppinsBold,
-    marginTop: 10,
-    color: '#0c223f',
-  },
-  subtitle: {
-    fontFamily: appFonts.PoppinsMedium,
-    fontSize: 14,
-    color: '#777',
-    marginBottom: 40,
-  },
   heading: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 80,
+    marginBottom: SH(70),
   },
   headingLeft: {
     flex: 1,
   },
   title: {
-    fontSize: 20,
-    fontWeight: '700',
-    color: appColors.DarkPrimary,
+    fontSize: SF(20),
+    fontFamily: appFonts.PoppinsSemiBold,
+    color: '#0c223f',
   },
   subtitle: {
-    fontSize: 14,
-    color: appColors.grey,
+    fontFamily: appFonts.PoppinsMedium,
+    fontSize: SF(12),
+    color: appColors.darkSubText,
   },
   headingRight: {
     flexDirection: 'row',
@@ -72,11 +62,12 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: appColors.stroke,
     backgroundColor: appColors.white,
-    borderRadius: 25,
-    paddingHorizontal: 20,
-    paddingVertical: 18,
-    marginBottom: 22,
-    fontSize: 14,
+    borderRadius: SW(30),
+    paddingHorizontal: SW(20),
+    paddingVertical: SH(16),
+    marginBottom: SW(25),
+    fontSize: SF(13),
+    fontFamily: appFonts.PoppinsRegular,
     color: appColors.darkText,
   },
   passwordContainer: {
@@ -85,36 +76,33 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: appColors.stroke,
     backgroundColor: appColors.white,
-    borderRadius: 25,
-    paddingHorizontal: 20,
-    marginBottom: 22,
+    borderRadius: SW(30),
+    paddingHorizontal: SW(20),
+    marginBottom: SH(16),
   },
   passwordInput: {
     flex: 1,
-    fontSize: 14,
-    paddingVertical: 18,
+    fontSize: SF(13),
+    fontFamily: appFonts.PoppinsRegular,
+    paddingVertical: SH(16),
     color: appColors.darkText,
   },
 
-  forgotText: {
-    fontSize: 13,
-    color: appColors.darkText,
-  },
   signInBtn: {
     backgroundColor: appColors.DarkPrimary,
     borderRadius: 16,
-    paddingVertical: 14,
+    paddingVertical: SH(12),
     alignItems: 'center',
-    marginBottom: 40,
+    marginBottom: SH(30),
   },
   signInText: {
     color: appColors.white,
-    fontSize: 16,
+    fontSize: SF(14),
     fontFamily: appFonts.PoppinsMedium,
   },
   footer: {
-    paddingHorizontal: 30,
-    paddingVertical: 15,
+    paddingHorizontal: SW(30),
+    paddingVertical: SH(12),
   },
   footerBottom: {
     alignItems: 'center',
@@ -123,12 +111,12 @@ const styles = StyleSheet.create({
   },
   notMember: {
     color: appColors.DarkPrimary,
-    fontSize: 16,
+    fontSize: SF(14),
     fontFamily: appFonts.PoppinsSemiBold,
   },
   registerText: {
     color: appColors.DarkPrimary,
-    fontSize: 16,
+    fontSize: SF(14),
     fontFamily: appFonts.PoppinsSemiBold,
     textDecorationLine: 'underline',
     textDecorationColor: appColors.DarkPrimary,
@@ -141,21 +129,21 @@ const styles = StyleSheet.create({
     marginVertical: 8,
   },
   checkbox: {
-    width: 26,
-    height: 26,
+    width: SW(20),
+    height: SW(20),
     borderRadius: 4,
     borderWidth: 1.5,
     borderColor: appColors.DarkPrimary,
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 10,
+    marginRight: SW(10),
     backgroundColor: appColors.white,
   },
   checked: {
     backgroundColor: appColors.DarkPrimary,
   },
   label: {
-    fontSize: 14,
+    fontSize: SF(12),
     color: appColors.DarkPrimary,
     fontFamily: appFonts.PoppinsSemiBold,
   },

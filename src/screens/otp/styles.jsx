@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingVertical: SH(30),
     paddingHorizontal: SW(20),
-    // backgroundColor: '#f00',
   },
   backgroundImage: {
     // flex: 1,
@@ -37,6 +36,18 @@ const styles = StyleSheet.create({
     color: appColors.darkSubText,
   },
 
+  phNumber: {
+    fontFamily: appFonts.PoppinsBold,
+    fontSize: SF(12),
+    color: appColors.darkText_2,
+    marginLeft: SW(5),
+  },
+
+  titleNumber: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
   codeContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -50,7 +61,7 @@ const styles = StyleSheet.create({
     borderColor: appColors.textInput_2,
     borderRadius: 8,
     fontSize: SF(18),
-    fontFamily: appFonts.PoppinsMedium,
+    fontFamily: appFonts.PoppinsRegular,
     backgroundColor: appColors.textInput_2,
   },
   activeInput: {

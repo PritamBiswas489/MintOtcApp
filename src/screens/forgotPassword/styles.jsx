@@ -1,16 +1,15 @@
 import appColors from '@src/theme/appColors';
 import appFonts from '@src/theme/appFonts';
 import { StyleSheet } from 'react-native';
+import { SW, SH, SF } from '@src/theme/dimensions';
 
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    padding: 20,
-    // backgroundColor: '#f00',
+    paddingVertical: SW(30),
+    paddingHorizontal: SW(20),
   },
   backgroundImage: {
-    // flex: 1,
-    // flexGrow: 1,
     width: '100%',
     height: '100%',
     position: 'absolute',
@@ -19,36 +18,37 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: appColors.white,
-    //
+  },
+
+  heading: {
+    marginBottom: SH(70),
   },
   title: {
-    fontSize: 22,
-    fontFamily: appFonts.PoppinsBold,
-    marginTop: 10,
+    fontSize: SF(20),
+    fontFamily: appFonts.PoppinsSemiBold,
     color: '#0c223f',
   },
   subtitle: {
     fontFamily: appFonts.PoppinsMedium,
-    fontSize: 14,
-    color: '#777',
-    marginBottom: 40,
+    fontSize: SF(12),
+    color: appColors.darkSubText,
   },
   tabContainer: {
     flexDirection: 'row',
     backgroundColor: appColors.white,
     borderRadius: 30,
     padding: 6,
-    marginBottom: 20,
+    marginBottom: SH(40),
     elevation: 6,
   },
   tab: {
     flex: 1,
     alignItems: 'center',
-    paddingVertical: 12,
-    borderRadius: 30,
+    paddingVertical: SH(10),
+    borderRadius: SW(30),
   },
   tabText: {
-    fontSize: 14,
+    fontSize: SF(14),
     color: appColors.bodyText,
     fontFamily: appFonts.PoppinsMedium,
   },
@@ -59,55 +59,31 @@ const styles = StyleSheet.create({
     color: appColors.white,
   },
   input: {
-    borderWidth: 1,
-    borderColor: appColors.stroke,
-    backgroundColor: appColors.white,
-    borderRadius: 25,
-    paddingHorizontal: 20,
-    paddingVertical: 18,
-    marginBottom: 15,
-    fontSize: 14,
+    backgroundColor: appColors.textInput_2,
+    borderRadius: SW(30),
+    paddingHorizontal: SW(20),
+    paddingVertical: SH(16),
+    marginBottom: SW(25),
+    fontSize: SF(13),
+    fontFamily: appFonts.PoppinsRegular,
     color: appColors.darkText,
   },
-  passwordContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderWidth: 1,
-    borderColor: appColors.stroke,
-    backgroundColor: appColors.white,
-    borderRadius: 25,
-    paddingHorizontal: 20,
-    marginBottom: 10,
-  },
-  passwordInput: {
-    flex: 1,
-    fontSize: 14,
-    paddingVertical: 18,
-    color: appColors.darkText,
-  },
-  forgotWrap: {
-    alignSelf: 'flex-end',
-    marginBottom: 30,
-  },
-  forgotText: {
-    fontSize: 13,
-    color: appColors.darkText,
-  },
+
   signInBtn: {
     backgroundColor: appColors.DarkPrimary,
     borderRadius: 16,
-    paddingVertical: 14,
+    paddingVertical: SH(12),
     alignItems: 'center',
-    marginBottom: 40,
+    marginBottom: SH(30),
   },
   signInText: {
     color: appColors.white,
-    fontSize: 16,
+    fontSize: SF(14),
     fontFamily: appFonts.PoppinsMedium,
   },
   footer: {
-    paddingHorizontal: 30,
-    paddingVertical: 15,
+    paddingHorizontal: SW(30),
+    paddingVertical: SH(12),
   },
   footerBottom: {
     alignItems: 'center',
@@ -116,14 +92,14 @@ const styles = StyleSheet.create({
   },
   notMember: {
     color: appColors.DarkPrimary,
-    fontSize: 16,
+    fontSize: SF(14),
     fontFamily: appFonts.PoppinsSemiBold,
   },
   registerText: {
     color: appColors.DarkPrimary,
-    fontSize: 16,
+    fontSize: SF(14),
     fontFamily: appFonts.PoppinsSemiBold,
-    textDecorationLine: 'underline', // <--- this is required
+    textDecorationLine: 'underline',
     textDecorationColor: appColors.DarkPrimary,
     textDecorationStyle: 'solid',
   },

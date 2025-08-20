@@ -21,16 +21,19 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
       <Image
         source={require('@assets/images/login.png')} // Replace with your image path
         style={styles.backgroundImage}
         resizeMode="cover"
       />
       <View style={styles.body}>
-        {/* Title */}
-        <Text style={styles.title}>Login Account</Text>
-        <Text style={styles.subtitle}>Hello, welcome back to our account</Text>
+        <View style={styles.heading}>
+          <Text style={styles.title}>Login Account</Text>
+          <Text style={styles.subtitle}>
+            Hello, welcome back to our account
+          </Text>
+        </View>
 
         {/* <Octicons name="home" size={24} color="#6848FF" /> */}
         {/* Tabs */}

@@ -21,16 +21,15 @@ const ForgotPassword = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <SafeAreaView style={styles.container}>
-      <Image
-        source={require('@assets/images/login.png')} // Replace with your image path
-        style={styles.backgroundImage}
-        resizeMode="cover"
-      />
+    <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
       <View style={styles.body}>
-        {/* Title */}
-        <Text style={styles.title}>Login Account</Text>
-        <Text style={styles.subtitle}>Hello, welcome back to our account</Text>
+        <View style={styles.heading}>
+          <Text style={styles.title}>Forget Password</Text>
+          <Text style={styles.subtitle}>
+            Don’t worry! it happens, Please enter the address associated with
+            your account.
+          </Text>
+        </View>
 
         {/* <Octicons name="home" size={24} color="#6848FF" /> */}
         {/* Tabs */}
@@ -68,7 +67,7 @@ const ForgotPassword = () => {
         {activeTab === 'mobile' ? (
           <TextInput
             style={styles.input}
-            placeholder="+44 |"
+            placeholder="+91 |"
             placeholderTextColor="#999"
             keyboardType="phone-pad"
           />
@@ -80,40 +79,17 @@ const ForgotPassword = () => {
             keyboardType="email-address"
           />
         )}
-
-        {/* Password */}
-        <View style={styles.passwordContainer}>
-          <TextInput
-            style={styles.passwordInput}
-            placeholder="Enter Password"
-            placeholderTextColor="#999"
-            secureTextEntry={!showPassword}
-          />
-          <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-            <VectorIcon
-              icon="Ionicons"
-              size={24}
-              name={showPassword ? 'eye' : 'eye-off'}
-              color={appColors.DarkPrimary}
-            />
-          </TouchableOpacity>
-        </View>
-
-        {/* Forgot Password */}
-        <TouchableOpacity style={styles.forgotWrap}>
-          <Text style={styles.forgotText}>Forget Password?</Text>
-        </TouchableOpacity>
       </View>
       <View style={styles.footer}>
         <TouchableOpacity style={styles.signInBtn}>
-          <Text style={styles.signInText}>Sign in</Text>
+          <Text style={styles.signInText}>Submit</Text>
         </TouchableOpacity>
 
         {/* Register */}
         <View style={styles.footerBottom}>
-          <Text style={styles.notMember}>Not a member? </Text>
+          <Text style={styles.notMember}>Remember Password? </Text>
           <TouchableOpacity>
-            <Text style={styles.registerText}>Register Now</Text>
+            <Text style={styles.registerText}>Sign in</Text>
           </TouchableOpacity>
         </View>
       </View>

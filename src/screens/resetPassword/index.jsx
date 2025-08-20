@@ -19,7 +19,7 @@ import appColors from '@src/theme/appColors';
 
 // import { Octicons } from 'react-native-vector-icons';
 
-const Register = () => {
+const ResetPassword = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [checked, setChecked] = useState(false);
   return (
@@ -30,30 +30,14 @@ const Register = () => {
         barStyle="dark-content"
       />
       <SafeAreaView style={{ flex: 1 }} edges={['left', 'right', 'bottom']}>
-        <Image
-          source={require('@assets/images/login.png')}
-          style={styles.backgroundImage}
-          resizeMode="cover"
-        />
         <View style={styles.body}>
           <View style={styles.heading}>
-            <View style={styles.headingLeft}>
-              <Text style={styles.title}>Sign up Account</Text>
-              <Text style={styles.subtitle}>
-                Hello, enter your informations below.
-              </Text>
-            </View>
-            {/* <View style={styles.headingRight}>
-              <Text style={styles.subtitle}>He</Text>
-            </View> */}
+            <Text style={styles.title}>Reset Password</Text>
+            <Text style={styles.subtitle}>
+              Don’t worry! it happens, Please enter the address associated with
+              your account.
+            </Text>
           </View>
-
-          <TextInput
-            style={styles.input}
-            placeholder="+44 |"
-            placeholderTextColor="#999"
-            keyboardType="phone-pad"
-          />
 
           <View style={styles.passwordContainer}>
             <TextInput
@@ -87,35 +71,17 @@ const Register = () => {
               />
             </TouchableOpacity>
           </View>
-
-          <TouchableOpacity
-            style={styles.checkBox}
-            onPress={() => setChecked(!checked)}
-            activeOpacity={0.7}
-          >
-            <View style={[styles.checkbox, checked && styles.checked]}>
-              {checked && (
-                <VectorIcon
-                  icon="Ionicons"
-                  name="checkmark"
-                  size={16}
-                  color={appColors.white}
-                />
-              )}
-            </View>
-            <Text style={styles.label}>
-              I agree to the <Text style={styles.bold}>Terms of user</Text> and{' '}
-              <Text style={styles.bold}>Privacy.</Text>
-            </Text>
-          </TouchableOpacity>
+          <Text style={styles.errorMsg}>
+            Password and confirm Password didn't match.
+          </Text>
         </View>
         <View style={styles.footer}>
           <TouchableOpacity style={styles.signInBtn}>
-            <Text style={styles.signInText}>Request Verification</Text>
+            <Text style={styles.signInText}>Submit</Text>
           </TouchableOpacity>
 
           <View style={styles.footerBottom}>
-            <Text style={styles.notMember}>Already have an account? </Text>
+            <Text style={styles.notMember}>Remember Password? </Text>
             <TouchableOpacity>
               <Text style={styles.registerText}>Sign in</Text>
             </TouchableOpacity>
@@ -126,4 +92,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default ResetPassword;

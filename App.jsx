@@ -5,15 +5,18 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeScreen from '@screens/homeScreen';
-import ScreenOne from '@screens/screenOne';
-import ScreenTwo from '@screens/screenTwo';
-import ScreenThree from '@screens/screenThree';
-import ScreenFour from '@screens/screenFour';
+// import ScreenOne from '@screens/screenOne';
+// import ScreenTwo from '@screens/screenTwo';
+// import ScreenThree from '@screens/screenThree';
+// import ScreenFour from '@screens/screenFour';
 
 import Login from '@screens/login';
 import Register from '@screens/register';
 import AccountVerification from '@screens/accountVerification';
 import ForgotPassword from '@screens/forgotPassword';
+import Otp from '@screens/otp';
+import ResetPassword from '@screens/resetPassword';
+import HomePage from '@screens/homePage';
 
 function DetailsScreen() {
   return (
@@ -93,6 +96,27 @@ export default function App() {
           }}
         />
         <Drawer.Screen
+          name="Otp"
+          component={Otp}
+          options={{
+            drawerLabel: 'OTP Verification',
+            headerTitle: 'OTP Verification',
+          }}
+        />
+        <Drawer.Screen
+          name="ResetPassword"
+          component={ResetPassword}
+          options={{
+            drawerLabel: 'ResetPassword',
+            headerTitle: 'ResetPassword',
+          }}
+        />
+        <Drawer.Screen
+          name="HomePage"
+          component={HomePage}
+          options={{ drawerLabel: 'HomePage', headerTitle: 'HomePage' }}
+        />
+        {/* <Drawer.Screen
           name="ScreenOne"
           component={ScreenOne}
           options={{ drawerLabel: 'Screen One', headerTitle: 'Screen One' }}
@@ -111,7 +135,7 @@ export default function App() {
           name="ScreenFour"
           component={ScreenFour}
           options={{ drawerLabel: 'Screen four', headerTitle: 'Screen Four' }}
-        />
+        /> */}
       </Drawer.Navigator>
     </NavigationContainer>
   );

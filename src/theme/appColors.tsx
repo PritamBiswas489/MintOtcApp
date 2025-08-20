@@ -1,10 +1,12 @@
 const appColors = {
   DarkPrimary: '#072f49',
-  primary: '#29BDFC',
+  DarkBg: '#001e32',
+  primary: '#48FAFF',
   secondary: '#A25CFC',
   darkText: '#222222',
+  darkText_2: '#001E32',
   darkSubText: '#808B97',
-  darkCard: '#1c1f29ff',
+  darkCard: '#1c1f29',
   white: '#FFFFFF',
   stroke: '#E0F3FE',
   error: '#FF4242',
@@ -12,6 +14,7 @@ const appColors = {
   border: '#f4f6f9',
   textInput: '#F7F8F8',
   textInput_2: '#F5F5F5',
+  lightBg: '#F2F9FC',
   modal: 'rgba(0, 0, 0, 0.5)',
   whiteTransparent: 'rgba(255, 255, 255, 0.9)',
 

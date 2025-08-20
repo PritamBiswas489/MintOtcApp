@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
 import styles from './styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const AccountVerification = () => {
+const Otp = () => {
   const [code, setCode] = useState(['', '', '', '', '', '']);
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -28,10 +28,11 @@ const AccountVerification = () => {
     <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
       <View style={styles.body}>
         <View style={styles.heading}>
-          <Text style={styles.title}>Account Verification</Text>
-          <Text style={styles.subtitle}>
-            Enter the code we just sent you on your
-          </Text>
+          <Text style={styles.title}>OTP Verification</Text>
+          <View style={styles.titleNumber}>
+            <Text style={styles.subtitle}>Enter the OTP sent to</Text>
+            <Text style={styles.phNumber}>+00-1234-567-8912</Text>
+          </View>
         </View>
 
         <View style={styles.codeContainer}>
@@ -71,4 +72,4 @@ const AccountVerification = () => {
   );
 };
 
-export default AccountVerification;
+export default Otp;
