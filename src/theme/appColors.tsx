@@ -28,7 +28,7 @@ const appColors = {
   green: '#00B164',
   lightGray: '#CCCCCC',
   inputBg: '#fafafa',
-  bodyText: '#999999',
+  bodyText: '#7a7a7aff',
 
   SubText: '#767676',
   divider_2: '#C8C8C8',

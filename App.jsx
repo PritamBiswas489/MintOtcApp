@@ -19,6 +19,7 @@ import ResetPassword from '@screens/resetPassword';
 import HomePage from '@screens/homePage';
 import FaqScreen from '@screens/faqScreen';
 import MembershipScreen from '@screens/membershipScreen';
+import TradeScreen from '@screens/tradeScreen';
 
 function DetailsScreen() {
   return (
@@ -129,6 +130,14 @@ export default function App() {
           options={{
             drawerLabel: 'Registration & Membership',
             headerTitle: 'Registration & Membership',
+          }}
+        />
+        <Drawer.Screen
+          name="TradeScreen"
+          component={TradeScreen}
+          options={{
+            drawerLabel: 'Trade',
+            headerTitle: 'Trade',
           }}
         />
 

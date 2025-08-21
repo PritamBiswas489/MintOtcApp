@@ -20,9 +20,9 @@ const styles = StyleSheet.create({
     marginBottom: SH(15),
   },
   image: {
-    backgroundColor: '#00D4FF',
-    height: SW(32),
-    width: SW(32),
+    backgroundColor: appColors.primary,
+    height: SW(40),
+    width: SW(40),
     borderRadius: SW(32),
     flexDirection: 'row',
     alignItems: 'center',
@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
   },
   name: {
     color: appColors.DarkPrimary,
-    fontSize: 16,
-    fontWeight: 'bold',
+    fontSize: SF(16),
+    fontFamily: appFonts.PoppinsBold,
   },
   notificationIcon: {
     padding: 5,
