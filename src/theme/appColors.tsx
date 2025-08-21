@@ -2,7 +2,7 @@ const appColors = {
   DarkPrimary: '#072f49',
   DarkBg: '#001e32',
   primary: '#48FAFF',
-  secondary: '#A25CFC',
+  secondary: '#08A3B0',
   darkText: '#222222',
   darkText_2: '#001E32',
   darkSubText: '#808B97',
@@ -18,7 +18,7 @@ const appColors = {
   modal: 'rgba(0, 0, 0, 0.5)',
   whiteTransparent: 'rgba(255, 255, 255, 0.9)',
 
-  boxBg: '#F9FAFA',
+  boxBg: '#f2f9fc',
   black: '#000000',
   darkTheme: '#1A1C28',
 

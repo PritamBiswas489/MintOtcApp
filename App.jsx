@@ -17,6 +17,8 @@ import ForgotPassword from '@screens/forgotPassword';
 import Otp from '@screens/otp';
 import ResetPassword from '@screens/resetPassword';
 import HomePage from '@screens/homePage';
+import FaqScreen from '@screens/faqScreen';
+import MembershipScreen from '@screens/membershipScreen';
 
 function DetailsScreen() {
   return (
@@ -116,6 +118,20 @@ export default function App() {
           component={HomePage}
           options={{ drawerLabel: 'HomePage', headerTitle: 'HomePage' }}
         />
+        <Drawer.Screen
+          name="FaqScreen"
+          component={FaqScreen}
+          options={{ drawerLabel: 'Faq', headerTitle: 'Faq' }}
+        />
+        <Drawer.Screen
+          name="MembershipScreen"
+          component={MembershipScreen}
+          options={{
+            drawerLabel: 'Registration & Membership',
+            headerTitle: 'Registration & Membership',
+          }}
+        />
+
         {/* <Drawer.Screen
           name="ScreenOne"
           component={ScreenOne}
