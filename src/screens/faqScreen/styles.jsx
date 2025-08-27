@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: SF(18),
     color: appColors.white,
-    fontFamily: appFonts.medium,
+    fontFamily: appFonts.PoppinsSemiBold,
     marginLeft: SW(10),
   },
   body: {

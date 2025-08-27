@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     paddingVertical: SH(18),
     backgroundColor: appColors.DarkBg,
   },
-  heading: {
+  header: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     fontFamily: appFonts.medium,
     textAlign: 'center',
   },
-
   activeTabText: {
     color: appColors.darkText,
   },
@@ -111,7 +110,6 @@ const styles = StyleSheet.create({
     fontFamily: appFonts.PoppinsMedium,
     opacity: 0.5,
   },
-
   activeCurrencyText: {
     opacity: 1,
   },
@@ -140,16 +138,25 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     paddingBottom: SW(5),
   },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  rowCenter: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+  },
   barmanjiName: {
     fontSize: SF(16),
-    color: appColors.black,
-    fontFamily: appFonts.medium,
+    color: appColors.darkText,
+    fontFamily: appFonts.PoppinsSemiBold,
     marginRight: SW(5),
   },
   tradeInfo: {
     fontSize: SF(12),
     color: '#666666',
-    fontFamily: appFonts.regular,
+    fontFamily: appFonts.PoppinsRegular,
     marginLeft: SW(5),
   },
   rowBetween: {
@@ -159,7 +166,7 @@ const styles = StyleSheet.create({
   },
   priceText: {
     fontSize: SF(18),
-    color: appColors.black,
+    color: appColors.darkText,
     fontFamily: appFonts.PoppinsSemiBold,
     marginBottom: SH(5),
   },
@@ -180,6 +187,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: SH(10),
   },
+  iconImg: {
+    marginLeft: SW(8),
+  },
   buyButton: {
     backgroundColor: appColors.DarkBg,
     paddingVertical: SH(8),
@@ -191,6 +201,177 @@ const styles = StyleSheet.create({
     color: appColors.white,
     fontSize: SF(14),
     fontFamily: appFonts.PoppinsMedium,
+  },
+  // Bottom Sheet Styles
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'flex-end',
+  },
+  bottomSheetContainer: {
+    backgroundColor: appColors.white,
+    borderTopLeftRadius: SW(20),
+    borderTopRightRadius: SW(20),
+    paddingVertical: SW(20),
+    maxHeight: SH(600),
+  },
+  closeButton: {
+    alignSelf: 'flex-end',
+    position: 'absolute',
+    top: SW(15),
+    right: SW(15),
+  },
+  bottomSheetContent: {
+    // paddingTop: SH(10),
+  },
+  currencyHeader: {
+    flexDirection: 'row',
+    marginBottom: SH(10),
+    paddingHorizontal: SW(20),
+  },
+  currencyIcon: {
+    width: SW(24),
+    height: SW(24),
+    marginRight: SW(10),
+  },
+  currencyTitle: {
+    fontSize: SF(18),
+    color: appColors.darkText,
+    fontFamily: appFonts.PoppinsSemiBold,
+  },
+  currencyTitleColor: {
+    fontSize: SF(18),
+    color: appColors.secondary,
+    fontFamily: appFonts.PoppinsSemiBold,
+  },
+
+  paymentOptions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: SH(15),
+  },
+  paymentIcon: {
+    marginRight: SW(5),
+  },
+  paymentText: {
+    fontSize: SF(14),
+    color: appColors.darkText,
+    fontFamily: appFonts.PoppinsSemiBold,
+    marginRight: SW(14),
+  },
+  amountReceive: {
+    backgroundColor: appColors.lightBg,
+    paddingRight: SW(20),
+    paddingLeft: SW(60),
+    paddingTop: SH(10),
+    position: 'relative',
+  },
+  clickCircelArea: {
+    position: 'absolute',
+    left: SW(20),
+    height: '100%',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  clickCircel: {
+    // position: 'absolute',
+    // top: '50%',
+    width: SW(30),
+    height: SW(30),
+    backgroundColor: appColors.DarkPrimary,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: SW(30),
+    borderWidth: 3,
+    borderColor: appColors.lightBg,
+  },
+  clickCircelLine: {
+    backgroundColor: appColors.lightGray,
+    height: '70%',
+    width: 1,
+    position: 'absolute',
+  },
+  inputContainer: {
+    marginBottom: SH(15),
+  },
+  inputLabel: {
+    fontSize: SF(14),
+    color: appColors.darkText,
+    fontFamily: appFonts.PoppinsMedium,
+    marginBottom: SH(5),
+  },
+  inputField: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: SW(10),
+    backgroundColor: appColors.white,
+    borderRadius: SW(8),
+  },
+  input: {
+    flex: 1,
+    fontSize: SF(16),
+    color: appColors.darkText,
+    fontFamily: appFonts.PoppinsRegular,
+    padding: 0,
+  },
+  jpayAll: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  inputCurrency: {
+    fontSize: SF(16),
+    color: appColors.darkText,
+    fontFamily: appFonts.PoppinsMedium,
+    paddingRight: SW(10),
+    lineHeight: SW(16),
+    borderRightColor: appColors.darkSubText,
+    borderRightWidth: 1,
+  },
+  inputAll: {
+    fontSize: SF(16),
+    color: appColors.darkText,
+    fontFamily: appFonts.PoppinsMedium,
+    color: appColors.secondary,
+
+    paddingLeft: SW(5),
+    lineHeight: SW(16),
+  },
+  inputusdt: {
+    fontSize: SF(16),
+    color: appColors.darkText,
+    fontFamily: appFonts.PoppinsMedium,
+  },
+
+  sheetBottom: {
+    padding: SW(20),
+  },
+  transactionRule: {
+    fontSize: SF(12),
+    color: appColors.bodyText,
+    fontFamily: appFonts.PoppinsRegular,
+    marginBottom: SH(5),
+  },
+  transactionRulesTitle: {
+    fontSize: SF(16),
+    color: appColors.darkText,
+    fontFamily: appFonts.PoppinsSemiBold,
+    marginBottom: SH(5),
+  },
+  submitButton: {
+    backgroundColor: appColors.DarkBg,
+    paddingVertical: SH(15),
+    borderRadius: SW(10),
+    alignItems: 'center',
+    marginTop: SH(20),
+  },
+  submitButtonText: {
+    color: appColors.white,
+    fontSize: SF(16),
+    fontFamily: appFonts.PoppinsSemiBold,
   },
 });
 

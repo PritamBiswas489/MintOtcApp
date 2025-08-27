@@ -20,6 +20,9 @@ import HomePage from '@screens/homePage';
 import FaqScreen from '@screens/faqScreen';
 import MembershipScreen from '@screens/membershipScreen';
 import TradeScreen from '@screens/tradeScreen';
+import FilterScreen from '@screens/filterScreen';
+import GoToPayScreen from '@screens/goToPayScreen';
+import ProfileScreen from '@screens/profileScreen';
 
 function DetailsScreen() {
   return (
@@ -138,6 +141,30 @@ export default function App() {
           options={{
             drawerLabel: 'Trade',
             headerTitle: 'Trade',
+          }}
+        />
+        <Drawer.Screen
+          name="FilterScreen"
+          component={FilterScreen}
+          options={{
+            drawerLabel: 'Filter',
+            headerTitle: 'Filter',
+          }}
+        />
+        <Drawer.Screen
+          name="GoToPayScreen"
+          component={GoToPayScreen}
+          options={{
+            drawerLabel: 'Go To Pay',
+            headerTitle: 'Go To Pay',
+          }}
+        />
+        <Drawer.Screen
+          name="ProfileScreen"
+          component={ProfileScreen}
+          options={{
+            drawerLabel: 'Profile',
+            headerTitle: 'Profile',
           }}
         />
 

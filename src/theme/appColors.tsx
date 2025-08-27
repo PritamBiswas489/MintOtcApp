@@ -12,6 +12,7 @@ const appColors = {
   error: '#FF4242',
   success: '#0CBC8B',
   border: '#f4f6f9',
+  border_2: '#e2e2e2',
   textInput: '#F7F8F8',
   textInput_2: '#F5F5F5',
   lightBg: '#F2F9FC',
@@ -28,8 +29,8 @@ const appColors = {
   green: '#00B164',
   lightGray: '#CCCCCC',
   inputBg: '#fafafa',
-  bodyText: '#7a7a7aff',
-
+  bodyText: '#7a7a7a',
+  bodyText_2: '#7a7a7a',
   SubText: '#767676',
   divider_2: '#C8C8C8',
   sheetBg: '#F2F1FF',
