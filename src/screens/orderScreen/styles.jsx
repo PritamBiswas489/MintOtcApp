@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     marginBottom: SH(10),
     borderBottomColor: appColors.cardBG,
     borderBottomWidth: 1,
-    paddingBottom: SW(5),
+    paddingBottom: SW(10),
   },
   row: {
     flexDirection: 'row',
@@ -174,19 +174,18 @@ const styles = StyleSheet.create({
   rowBetween: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'flex-start',
   },
   priceText: {
     fontSize: SF(18),
     color: appColors.darkText,
     fontFamily: appFonts.PoppinsSemiBold,
-    marginBottom: SH(5),
   },
   limitsText: {
     fontSize: SF(14),
     color: appColors.bodyText,
     fontFamily: appFonts.PoppinsRegular,
-    marginBottom: SH(5),
+    marginBottom: SH(3),
   },
   volumeText: {
     fontSize: SF(14),
@@ -210,7 +209,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buyButtonText: {
-    color: appColors.white,
+    color: appColors.bodyText_2,
     fontSize: SF(14),
     fontFamily: appFonts.PoppinsMedium,
   },

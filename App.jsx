@@ -23,6 +23,16 @@ import TradeScreen from '@screens/tradeScreen';
 import FilterScreen from '@screens/filterScreen';
 import GoToPayScreen from '@screens/goToPayScreen';
 import ProfileScreen from '@screens/profileScreen';
+import FpsScreen from '@screens/fpsScreen';
+import WaitFoPaymentScreen from '@screens/waitFoPaymentScreen';
+import OrderScreen from '@screens/orderScreen';
+import OrderDetailsScreen from '@screens/orderDetailsScreen';
+import SettingScreen from '@screens/settingScreen';
+import PostingScreen from '@screens/postingScreen';
+import NotificationSettingsScreen from '@screens/notificationSettingsScreen';
+import LanguageScreen from '@screens/languageScreen';
+import CountryRegionScreen from '@screens/countryRegionScreen';
+import ProfileTwo from '@screens/profileTwo';
 
 function DetailsScreen() {
   return (
@@ -165,6 +175,87 @@ export default function App() {
           options={{
             drawerLabel: 'Profile',
             headerTitle: 'Profile',
+          }}
+        />
+        <Drawer.Screen
+          name="FpsScreen"
+          component={FpsScreen}
+          options={{
+            drawerLabel: 'Fps',
+            headerTitle: 'Fps',
+          }}
+        />
+        <Drawer.Screen
+          name="WaitFoPaymentScreen"
+          component={WaitFoPaymentScreen}
+          options={{
+            drawerLabel: 'Wait Fo Payment',
+            headerTitle: 'Wait Fo Payment',
+          }}
+        />
+        <Drawer.Screen
+          name="OrderScreen"
+          component={OrderScreen}
+          options={{
+            drawerLabel: 'Order',
+            headerTitle: 'Order',
+          }}
+        />
+        <Drawer.Screen
+          name="OrderDetailsScreen"
+          component={OrderDetailsScreen}
+          options={{
+            drawerLabel: 'Order Details',
+            headerTitle: 'Order Details',
+          }}
+        />
+        <Drawer.Screen
+          name="SettingScreen"
+          component={SettingScreen}
+          options={{
+            drawerLabel: 'Setting',
+            headerTitle: 'Order Setting',
+          }}
+        />
+        <Drawer.Screen
+          name="PostingScreen"
+          component={PostingScreen}
+          options={{
+            drawerLabel: 'Posting',
+            headerTitle: 'Posting ',
+          }}
+        />
+        <Drawer.Screen
+          name="NotificationSettingsScreen"
+          component={NotificationSettingsScreen}
+          options={{
+            drawerLabel: 'Notification Settings',
+            headerTitle: 'Notification Settings ',
+          }}
+        />
+        <Drawer.Screen
+          name="LanguageScreen"
+          component={LanguageScreen}
+          options={{
+            drawerLabel: 'Language',
+            headerTitle: 'Language ',
+          }}
+        />
+        <Drawer.Screen
+          name="CountryRegionScreen"
+          component={CountryRegionScreen}
+          options={{
+            drawerLabel: 'Country/Region',
+            headerTitle: 'Country/Region ',
+          }}
+        />
+
+        <Drawer.Screen
+          name="ProfileTwo"
+          component={ProfileTwo}
+          options={{
+            drawerLabel: 'Profile Two',
+            headerTitle: 'Profile Two ',
           }}
         />
 

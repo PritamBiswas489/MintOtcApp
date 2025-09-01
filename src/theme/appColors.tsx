@@ -30,7 +30,7 @@ const appColors = {
   lightGray: '#CCCCCC',
   inputBg: '#fafafa',
   bodyText: '#7a7a7a',
-  bodyText_2: '#7a7a7a',
+  bodyText_2: '#999',
   SubText: '#767676',
   divider_2: '#C8C8C8',
   sheetBg: '#F2F1FF',

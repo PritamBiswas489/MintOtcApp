@@ -7,6 +7,7 @@ import appColors from '@src/theme/appColors';
 import ChatIcon from '@src/assets/images/Chat.svg';
 import DiamondIcon from '@src/assets/images/diamond.svg';
 import FpsIcon from '@src/assets/images/fps.svg';
+import FileIcon from '@src/assets/images/file-copy.svg';
 import ShildIcon from '@src/assets/images/shild.svg';
 import { SW } from '@src/theme/dimensions';
 
@@ -75,7 +76,9 @@ const GoToPayScreen = () => {
         </TouchableOpacity>
         <View style={styles.detailRow}>
           <Text style={styles.label}>Total</Text>
-          <Text style={styles.value}>HK$500.00</Text>
+          <Text style={styles.value}>
+            HK$500.00 <FileIcon width={16} height={16} />
+          </Text>
         </View>
         <View style={styles.detailRow}>
           <Text style={styles.label}>Price</Text>
@@ -87,11 +90,15 @@ const GoToPayScreen = () => {
         </View>
         <View style={styles.detailRow}>
           <Text style={styles.label}>Reference ID</Text>
-          <Text style={styles.value}>967438</Text>
+          <Text style={styles.value}>
+            967438 <FileIcon width={16} height={16} />
+          </Text>
         </View>
         <View style={styles.detailRow}>
           <Text style={styles.label}>Order</Text>
-          <Text style={styles.value}>#956552010120347848</Text>
+          <Text style={styles.value}>
+            #956552010120347848 <FileIcon width={16} height={16} />
+          </Text>
         </View>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.cancelButton}>

@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, Modal } from 'react-native';
 import styles from './styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import VectorIcon from '@src/utils/VectoreIcons';
@@ -15,6 +15,7 @@ import UserIcon from '@src/assets/images/user.svg';
 import { SW } from '@src/theme/dimensions';
 
 const ProfileScreen = () => {
+  const [isOtcModalVisible, setIsOtcModalVisible] = useState(false);
   return (
     <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
       <View style={styles.headerWrap}>
@@ -108,7 +109,60 @@ const ProfileScreen = () => {
             <Text style={styles.verify}>Verify</Text>
           </View>
         </View>
+        <View style={styles.trustUserRow}>
+          <TouchableOpacity
+            style={styles.trustUserButton}
+            onPress={() => {
+              setIsOtcModalVisible(true);
+            }}
+          >
+            <Text style={styles.trustUserText}>Trust User</Text>
+          </TouchableOpacity>
+        </View>
       </View>
+
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={isOtcModalVisible}
+        onRequestClose={() => setIsOtcModalVisible(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.bottomSheetContainer}>
+            {/* <TouchableOpacity
+              style={styles.closeButton}
+              onPress={() => setIsOtcModalVisible(false)}
+            >
+              <VectorIcon
+                name="x"
+                icon="Feather"
+                size={24}
+                color={appColors.darkText}
+              />
+            </TouchableOpacity> */}
+            {/* <View style={styles.bottomSheetContent}> */}
+            <Text style={styles.transactionRulesTitle}>Notice</Text>
+            <Text style={styles.transactionRule}>
+              Are you sure you want to block trabsactions with this user?
+            </Text>
+            <View style={styles.rowCenter}>
+              <TouchableOpacity style={[styles.submitButton, { width: '40%' }]}>
+                <Text style={styles.submitButtonText}>Submit</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.submitButton,
+                  { backgroundColor: appColors.lightBg, width: '40%' },
+                ]}
+                onPress={() => setIsOtcModalVisible(false)}
+              >
+                <Text style={styles.cancelButtonText}>Cancel</Text>
+              </TouchableOpacity>
+            </View>
+            {/* </View> */}
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 };

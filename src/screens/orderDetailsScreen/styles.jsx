@@ -93,24 +93,27 @@ const styles = StyleSheet.create({
   },
 
   infoText: {
-    color: appColors.bodyText_2,
-    fontSize: SF(13),
-    fontFamily: appFonts.PoppinsMedium,
+    color: appColors.error,
+    fontSize: SF(16),
+    fontFamily: appFonts.PoppinsSemiBold,
   },
-
+  rowJustify: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: SW(5),
+  },
   detailRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
     marginBottom: SH(8),
     paddingVertical: SW(12),
+    paddingHorizontal: SW(15),
+    backgroundColor: appColors.white,
     borderRadius: SW(8),
-    borderBottomColor: appColors.border_2,
-    borderBottomWidth: 1,
   },
   label: {
-    color: appColors.darkText,
-    fontSize: SF(13),
+    color: appColors.SubText,
+    fontSize: SF(15),
     fontFamily: appFonts.PoppinsMedium,
   },
   row: {
@@ -122,110 +125,47 @@ const styles = StyleSheet.create({
     fontSize: SF(20),
     fontFamily: appFonts.PoppinsSemiBold,
   },
+  val: {
+    color: appColors.DarkPrimary,
+    fontSize: SF(15),
+    fontFamily: appFonts.PoppinsSemiBold,
+  },
+
   colLabel: {
     color: appColors.darkText,
     fontSize: SF(11),
     fontFamily: appFonts.PoppinsRegular,
   },
-  verified: {
-    backgroundColor: appColors.green,
-    color: appColors.white,
-    paddingHorizontal: SW(6),
-    fontSize: SF(12),
-    fontFamily: appFonts.PoppinsSemiBold,
-    lineHeight: SF(22),
-    borderRadius: 6,
-  },
-  verify: {
-    backgroundColor: appColors.secondary,
-    color: appColors.white,
-    paddingHorizontal: SW(6),
-    fontSize: SF(12),
-    fontFamily: appFonts.PoppinsSemiBold,
-    lineHeight: SF(22),
-    borderRadius: 6,
-  },
-  trustUserButton: {
-    backgroundColor: appColors.DarkBg,
-    paddingVertical: SH(10),
-    borderRadius: SH(20),
-    alignItems: 'center',
-    marginHorizontal: SW(40),
-  },
-  trustUserText: {
-    color: appColors.white,
-    fontSize: SF(14),
-    fontFamily: appFonts.PoppinsSemiBold,
-  },
-  trustUserRow: {
-    marginTop: SH(60),
-  },
-
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  bottomSheetContainer: {
-    backgroundColor: appColors.white,
-    borderRadius: SW(20),
-    paddingVertical: SW(30),
-    paddingHorizontal: SW(20),
-    width: '90%',
-  },
-  closeButton: {
-    alignSelf: 'flex-end',
-    position: 'absolute',
-    top: SW(15),
-    right: SW(15),
-  },
-
-  transactionRulesTitle: {
-    fontSize: SF(16),
-    color: appColors.darkText,
-    fontFamily: appFonts.PoppinsSemiBold,
-    marginBottom: SH(5),
-    textAlign: 'center',
-  },
-  transactionRule: {
-    fontSize: SF(14),
-    color: appColors.bodyText,
-    fontFamily: appFonts.PoppinsRegular,
-    marginBottom: SH(5),
-    textAlign: 'center',
-  },
-
-  rowCenter: {
+  buttonContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-evenly',
   },
-  submitButton: {
-    backgroundColor: appColors.DarkBg,
-    paddingVertical: SH(12),
-    borderRadius: SW(10),
+  cancelButton: {
+    backgroundColor: appColors.white,
+    paddingVertical: SW(12),
+    borderRadius: SW(12),
     alignItems: 'center',
-    marginTop: SH(20),
+    marginTop: SW(12),
+    width: '46%',
   },
-  submitButtonText: {
-    color: appColors.white,
+  cancelText: {
+    color: appColors.darkText,
     fontSize: SF(14),
-    fontFamily: appFonts.PoppinsMedium,
+    fontFamily: appFonts.PoppinsSemiBold,
   },
-  cancelButtonText: {
-    color: appColors.bodyText,
+  submitButton: {
+    backgroundColor: appColors.DarkPrimary,
+    paddingVertical: SW(12),
+    borderRadius: SW(12),
+    alignItems: 'center',
+    marginTop: SW(12),
+    width: '46%',
+  },
+  submitText: {
+    color: '#fff',
     fontSize: SF(14),
-    fontFamily: appFonts.PoppinsMedium,
-  },
-
-  buyButtonText: {
-    color: appColors.white,
-    fontSize: SF(14),
-    fontFamily: appFonts.PoppinsMedium,
-  },
-  bottomSheetContent: {
-    // padding: SH(10),
+    fontFamily: appFonts.PoppinsSemiBold,
   },
 });
 

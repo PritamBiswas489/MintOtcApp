@@ -23,7 +23,7 @@ import Click from '@src/assets/images/clik.svg';
 import DiamondIcon from '@src/assets/images/diamond.svg';
 import CrownIcon from '@src/assets/images/crown.svg';
 
-const TradeScreen = () => {
+const OrderScreen = () => {
   // State for active tab
   const [activeTab, setActiveTab] = useState('Buy');
 
@@ -40,12 +40,9 @@ const TradeScreen = () => {
 
   // Currency data for FlatList
   const currencyData = [
-    { id: '1', name: 'USDT' },
-    { id: '2', name: 'BTC' },
-    { id: '3', name: 'ETH' },
-    { id: '4', name: 'HT' },
-    { id: '5', name: 'EOS' },
-    { id: '6', name: 'XRP' },
+    { id: '1', name: 'All' },
+    { id: '2', name: 'Cancelled' },
+    { id: '3', name: 'Completed' },
   ];
 
   // Barmanji data for looped items
@@ -53,32 +50,30 @@ const TradeScreen = () => {
     {
       id: '1',
       name: 'Barmanji',
-      price: '78.07 INR',
-      limits: '300,000.00 - 400,000.00 INR',
-      volume: '7,000,000,000 USDT',
+      price: '100,000.00 JPY',
+      limits: 'Sell USDT',
       icon: 'diamond',
     },
     {
       id: '2',
       name: 'Barmanji',
-      price: '78.07 INR',
-      limits: '300,000.00 - 400,000.00 INR',
-      volume: '7,000,000,000 USDT',
-      icon: 'crown',
+      price: '100,000.00 JPY',
+      limits: 'Sell USDT',
+      icon: 'diamond',
     },
     {
       id: '3',
       name: 'Barmanji',
-      price: '78.07 INR',
-      limits: '300,000.00 - 400,000.00 INR',
-      volume: '7,000,000,000 USDT',
+      price: '100,000.00 JPY',
+      limits: 'Sell USDT',
+      icon: 'diamond',
     },
     {
       id: '4',
       name: 'Barmanji',
-      price: '78.07 INR',
-      limits: '300,000.00 - 400,000.00 INR',
-      volume: '7,000,000,000 USDT',
+      price: '100,000.00 JPY',
+      limits: 'Sell USDT',
+      icon: 'diamond',
     },
   ];
 
@@ -118,26 +113,22 @@ const TradeScreen = () => {
             <Text style={styles.barmanjiName}>{item.name}</Text>
             {IconComponent && <IconComponent width={18} height={18} />}
           </View>
-          <Text style={styles.tradeInfo}>Trade 0 | Trade rate 0%</Text>
+          <Text style={styles.tradeInfo}>2022/03/23</Text>
         </View>
-        <View style={styles.rowBetween}>
+        {/* <View style={styles.rowBetween}>
           <Text style={styles.priceText}>{item.price}</Text>
           <View style={styles.iconRow}>
             <Upi style={styles.iconImg} height={20} width={20} />
             <Imps style={styles.iconImg} height={20} width={20} />
           </View>
-        </View>
+        </View> */}
         <View style={styles.rowBetween}>
           <View>
             <Text style={styles.limitsText}>{item.limits}</Text>
-            <Text style={styles.volumeText}>{item.volume}</Text>
+            {/* <Text style={styles.volumeText}>{item.volume}</Text> */}
+            <Text style={styles.priceText}>{item.price}</Text>
           </View>
-          <TouchableOpacity
-            style={styles.buyButton}
-            onPress={() => setIsBottomSheetVisible(true)}
-          >
-            <Text style={styles.buyButtonText}>Buy</Text>
-          </TouchableOpacity>
+          <Text style={styles.buyButtonText}>Order complete</Text>
         </View>
       </View>
     );
@@ -184,7 +175,7 @@ const TradeScreen = () => {
                 activeTab === 'Buy' && styles.activeTabText,
               ]}
             >
-              Buy
+              Ongoing
             </Text>
           </TouchableOpacity>
 
@@ -202,7 +193,7 @@ const TradeScreen = () => {
                 activeTab === 'Sell' && styles.activeTabText,
               ]}
             >
-              Sell
+              Completed
             </Text>
           </TouchableOpacity>
         </View>
@@ -345,68 +336,8 @@ const TradeScreen = () => {
           </View>
         </View>
       </Modal>
-
-      {/* PrimoPay OTC Security Reminder Modal */}
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={isOtcModalVisible}
-        onRequestClose={() => setIsOtcModalVisible(false)}
-      >
-        <View style={styles.modalOverlay}>
-          <View style={styles.bottomSheetContainer}>
-            {/* <TouchableOpacity
-              style={styles.closeButton}
-              onPress={() => setIsOtcModalVisible(false)}
-            >
-              <VectorIcon
-                name="x"
-                icon="Feather"
-                size={24}
-                color={appColors.darkText}
-              />
-            </TouchableOpacity> */}
-            <View style={styles.bottomSheetContent}>
-              <View style={styles.sheetBottom}>
-                <Text style={styles.transactionRulesTitle}>
-                  PrimoPay OTC Security Reminder
-                </Text>
-                <Text style={styles.transactionRule}>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
-                </Text>
-                <View style={styles.rowCenter}>
-                  <TouchableOpacity
-                    style={[styles.submitButton, { width: '40%' }]}
-                    onPress={() => setIsOtcModalVisible(false)}
-                  >
-                    <Text style={styles.submitButtonText}>Submit</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={[
-                      styles.submitButton,
-                      { backgroundColor: appColors.lightGray, width: '40%' },
-                    ]}
-                    onPress={() => setIsOtcModalVisible(false)}
-                  >
-                    <Text style={styles.buyButtonText}>Cancel</Text>
-                  </TouchableOpacity>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      </Modal>
     </SafeAreaView>
   );
 };
 
-export default TradeScreen;
+export default OrderScreen;
