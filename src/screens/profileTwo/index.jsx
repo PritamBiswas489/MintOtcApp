@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Modal } from 'react-native';
+import { View, Text, TouchableOpacity, Modal, ScrollView } from 'react-native';
 import styles from './styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import VectorIcon from '@src/utils/VectoreIcons';
@@ -58,96 +58,101 @@ const ProfileTwo = () => {
       </View>
 
       <View style={styles.body}>
-        <View style={styles.bodyInner}>
-          <TouchableOpacity style={styles.detailRow}>
-            <User width={25} height={25} />
-            <Text style={styles.label}>My Profile</Text>
-            <VectorIcon
-              icon="FontAwesome6"
-              name="angle-right"
-              size={16}
-              color={appColors.bodyText_2}
-              style={styles.arrowIcon}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.detailRow}>
-            <Wallet width={25} height={25} />
-            <Text style={styles.label}>My Balance</Text>
-            <VectorIcon
-              icon="FontAwesome6"
-              name="angle-right"
-              size={16}
-              color={appColors.bodyText_2}
-              style={styles.arrowIcon}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.detailRow}>
-            <Block width={30} height={25} />
-            <Text style={styles.label}>Language</Text>
-            <VectorIcon
-              icon="FontAwesome6"
-              name="angle-right"
-              size={16}
-              color={appColors.bodyText_2}
-              style={styles.arrowIcon}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.detailRow}>
-            <Verification width={25} height={25} />
-            <Text style={styles.label}>KYC Verification</Text>
-            <VectorIcon
-              icon="FontAwesome6"
-              name="angle-right"
-              size={16}
-              color={appColors.bodyText_2}
-              style={styles.arrowIcon}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.detailRow}>
-            <Payment width={25} height={25} />
-            <Text style={styles.label}>Payment</Text>
-            <VectorIcon
-              icon="FontAwesome6"
-              name="angle-right"
-              size={16}
-              color={appColors.bodyText_2}
-              style={styles.arrowIcon}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.detailRow}>
-            <Security width={25} height={25} />
-            <Text style={styles.label}>Security Center</Text>
-            <VectorIcon
-              icon="FontAwesome6"
-              name="angle-right"
-              size={16}
-              color={appColors.bodyText_2}
-              style={styles.arrowIcon}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.detailRow}>
-            <Ads width={25} height={25} />
-            <Text style={styles.label}>My Ads</Text>
-            <VectorIcon
-              icon="FontAwesome6"
-              name="angle-right"
-              size={16}
-              color={appColors.bodyText_2}
-              style={styles.arrowIcon}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.detailRow}>
-            <About width={25} height={25} />
-            <Text style={styles.label}>Abouts Us</Text>
-            <VectorIcon
-              icon="FontAwesome6"
-              name="angle-right"
-              size={16}
-              color={appColors.bodyText_2}
-              style={styles.arrowIcon}
-            />
-          </TouchableOpacity>
-        </View>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.scrollContent}
+        >
+          <View style={styles.bodyInner}>
+            <TouchableOpacity style={styles.detailRow}>
+              <User width={25} height={25} />
+              <Text style={styles.label}>My Profile</Text>
+              <VectorIcon
+                icon="FontAwesome6"
+                name="angle-right"
+                size={16}
+                color={appColors.bodyText_2}
+                style={styles.arrowIcon}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.detailRow}>
+              <Wallet width={25} height={25} />
+              <Text style={styles.label}>My Balance</Text>
+              <VectorIcon
+                icon="FontAwesome6"
+                name="angle-right"
+                size={16}
+                color={appColors.bodyText_2}
+                style={styles.arrowIcon}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.detailRow}>
+              <Block width={30} height={25} />
+              <Text style={styles.label}>Language</Text>
+              <VectorIcon
+                icon="FontAwesome6"
+                name="angle-right"
+                size={16}
+                color={appColors.bodyText_2}
+                style={styles.arrowIcon}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.detailRow}>
+              <Verification width={25} height={25} />
+              <Text style={styles.label}>KYC Verification</Text>
+              <VectorIcon
+                icon="FontAwesome6"
+                name="angle-right"
+                size={16}
+                color={appColors.bodyText_2}
+                style={styles.arrowIcon}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.detailRow}>
+              <Payment width={25} height={25} />
+              <Text style={styles.label}>Payment</Text>
+              <VectorIcon
+                icon="FontAwesome6"
+                name="angle-right"
+                size={16}
+                color={appColors.bodyText_2}
+                style={styles.arrowIcon}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.detailRow}>
+              <Security width={25} height={25} />
+              <Text style={styles.label}>Security Center</Text>
+              <VectorIcon
+                icon="FontAwesome6"
+                name="angle-right"
+                size={16}
+                color={appColors.bodyText_2}
+                style={styles.arrowIcon}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.detailRow}>
+              <Ads width={25} height={25} />
+              <Text style={styles.label}>My Ads</Text>
+              <VectorIcon
+                icon="FontAwesome6"
+                name="angle-right"
+                size={16}
+                color={appColors.bodyText_2}
+                style={styles.arrowIcon}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.detailRow}>
+              <About width={25} height={25} />
+              <Text style={styles.label}>Abouts Us</Text>
+              <VectorIcon
+                icon="FontAwesome6"
+                name="angle-right"
+                size={16}
+                color={appColors.bodyText_2}
+                style={styles.arrowIcon}
+              />
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
       </View>
     </SafeAreaView>
   );

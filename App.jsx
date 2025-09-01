@@ -33,6 +33,9 @@ import NotificationSettingsScreen from '@screens/notificationSettingsScreen';
 import LanguageScreen from '@screens/languageScreen';
 import CountryRegionScreen from '@screens/countryRegionScreen';
 import ProfileTwo from '@screens/profileTwo';
+import MyProfileScreen from '@screens/myProfileScreen';
+import EditMyProfileScreen from '@screens/editMyProfileScreen';
+import MyBalancesScreen from '@screens/myBalancesScreen';
 
 function DetailsScreen() {
   return (
@@ -256,6 +259,30 @@ export default function App() {
           options={{
             drawerLabel: 'Profile Two',
             headerTitle: 'Profile Two ',
+          }}
+        />
+        <Drawer.Screen
+          name="MyProfileScreen"
+          component={MyProfileScreen}
+          options={{
+            drawerLabel: 'My Profile',
+            headerTitle: 'My Profile',
+          }}
+        />
+        <Drawer.Screen
+          name="EditMyProfileScreen"
+          component={EditMyProfileScreen}
+          options={{
+            drawerLabel: 'Edit Profile',
+            headerTitle: 'My Profile',
+          }}
+        />
+        <Drawer.Screen
+          name="MyBalancesScreen"
+          component={MyBalancesScreen}
+          options={{
+            drawerLabel: 'My Balance',
+            headerTitle: 'My Balance',
           }}
         />
 
