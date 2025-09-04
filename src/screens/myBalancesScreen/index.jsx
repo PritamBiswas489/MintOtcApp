@@ -1,12 +1,15 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, FlatList } from 'react-native';
+import { View, Text, TouchableOpacity, FlatList, Image } from 'react-native';
 import styles from './styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import VectorIcon from '@src/utils/VectoreIcons';
 import appColors from '@src/theme/appColors';
 import EyeIcon from '@src/assets/images/eye.svg';
 import { SW, SH, SF } from '@src/theme/dimensions';
-import Check from '@src/assets/images/profile/check.svg';
+import Try from '@src/assets/images/balance/try.svg';
+import Usdt from '@src/assets/images/balance/usdt.svg';
+import Btc from '@src/assets/images/balance/btc.svg';
+import Eth from '@src/assets/images/balance/eth.svg';
 
 const MyBalancesScreen = () => {
   const primoPayDataList = [
@@ -40,30 +43,30 @@ const MyBalancesScreen = () => {
     {
       id: '1',
       currency: 'TRY',
-      color: '#FF6B6B',
       available: '0.00',
       frozen: '0.00',
+      image: Try,
     },
     {
       id: '2',
       currency: 'USDT',
-      color: '#4CAF50',
       available: '161.155410',
       frozen: '10000.000000',
+      image: Usdt,
     },
     {
       id: '3',
       currency: 'BTC',
-      color: '#F2A900',
       available: '2.372933',
       frozen: '0.00000',
+      image: Btc,
     },
     {
       id: '4',
       currency: 'ETH',
-      color: '#6A1B9A',
       available: '0.00',
       frozen: '0.00',
+      image: Eth,
     },
   ];
 
@@ -90,6 +93,13 @@ const MyBalancesScreen = () => {
         keyExtractor={item => item.id}
         scrollEnabled={false}
       />
+      <View style={styles.cardBg}>
+        <Image
+          source={require('@assets/images/balance/bg.png')}
+          style={styles.menuIcon}
+          resizeMode="cover"
+        />
+      </View>
     </View>
   );
 
@@ -97,23 +107,27 @@ const MyBalancesScreen = () => {
     <View style={styles.balanceItemBox}>
       <View style={styles.balanceItem}>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-          <View style={[styles.indicator, { backgroundColor: item.color }]} />
+          <item.image width={24} height={24} />
           <Text style={styles.currencyText}>{item.currency}</Text>
         </View>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-          <TouchableOpacity>
+          <TouchableOpacity style={styles.lightButton}>
             <Text style={styles.buttonText}>Deposit</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity style={styles.lightButton}>
             <Text style={styles.buttonText}>Transfer</Text>
           </TouchableOpacity>
         </View>
       </View>
       <View style={styles.balanceDetails}>
-        <Text style={styles.labelText}>Available</Text>
-        <Text style={styles.valueText}>{item.available}</Text>
-        <Text style={styles.labelText}>Frozen</Text>
-        <Text style={styles.valueText}>{item.frozen}</Text>
+        <View style={styles.balanceDetailsInner}>
+          <Text style={styles.labelText}>Available</Text>
+          <Text style={styles.valueText}>{item.available}</Text>
+        </View>
+        <View style={styles.balanceDetailsInner}>
+          <Text style={styles.labelText}>Frozen</Text>
+          <Text style={styles.valueText}>{item.frozen}</Text>
+        </View>
       </View>
     </View>
   );
@@ -153,13 +167,15 @@ const MyBalancesScreen = () => {
             }}
           />
         </View>
-        <FlatList
-          data={balanceData}
-          renderItem={renderBalanceItem}
-          keyExtractor={item => item.id}
-          style={{ flex: 1 }}
-          contentContainerStyle={{ paddingBottom: SH(20) }}
-        />
+        <View style={styles.bodyBottomInner}>
+          <FlatList
+            data={balanceData}
+            renderItem={renderBalanceItem}
+            keyExtractor={item => item.id}
+            style={{ flex: 1 }}
+            contentContainerStyle={{ paddingBottom: SH(20) }}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );

@@ -59,40 +59,54 @@ const styles = StyleSheet.create({
     backgroundColor: appColors.secondary,
     padding: SW(15),
     borderRadius: SW(10),
-    // marginBottom: SW(15),
     width: SW(280),
     marginRight: SW(10),
+    position: 'relative',
+  },
+  cardBg: {
+    position: 'absolute',
+    bottom: '0',
+    right: '0',
+    opacity: 0.5,
   },
 
   balanceItemBox: {
     backgroundColor: appColors.white,
     marginBottom: SW(10),
+    paddingVertical: SW(15),
   },
   bodyTopInner: {
     paddingLeft: SW(20),
     paddingBottom: SW(15),
+  },
+  bodyBottomInner: {
+    flex: 1,
   },
 
   balanceItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: SH(10),
+    // paddingVertical: SH(15),
     paddingHorizontal: SW(20),
-    borderBottomWidth: 1,
-    borderBottomColor: '#E0E0E0',
     // backgroundColor: appColors.DarkBg,
   },
   balanceDetails: {
     paddingHorizontal: SW(20),
-    paddingVertical: SH(5),
-    borderBottomWidth: 1,
-    borderBottomColor: '#E0E0E0',
+    marginTop: SW(15),
+    // paddingVertical: SH(10),
     // backgroundColor: appColors.DarkBg,
   },
+  balanceDetailsInner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+
   currencyText: {
-    color: appColors.white,
+    fontFamily: appFonts.PoppinsBold,
     fontSize: SW(16),
+    marginLeft: SW(10),
   },
   valueText: {
     color: appColors.white,
@@ -108,12 +122,12 @@ const styles = StyleSheet.create({
     color: appColors.darkTheme,
     fontFamily: appFonts.PoppinsRegular,
     lineHeight: SF(16),
+    // marginBottom: SH(10),
   },
   valueText: {
     color: appColors.darkTheme,
     fontSize: SF(20),
     fontFamily: appFonts.PoppinsSemiBold,
-    marginTop: SW(5),
   },
   valueTextBottom: {
     color: appColors.darkTheme,
@@ -123,11 +137,20 @@ const styles = StyleSheet.create({
   },
 
   labelText: {
-    color: appColors.lightGray,
+    color: appColors.bodyText,
+    fontFamily: appFonts.PoppinsMedium,
+  },
+  lightButton: {
+    backgroundColor: appColors.lightBg,
+    paddingHorizontal: SW(15),
+    paddingVertical: SW(5),
+    marginLeft: SW(10),
+    borderRadius: SW(8),
   },
   buttonText: {
-    color: appColors.lightGray,
-    padding: SW(5),
+    color: appColors.DarkBg,
+    fontFamily: appFonts.PoppinsSemiBold,
+    fontSize: SF(14),
   },
   indicator: {
     width: SW(10),

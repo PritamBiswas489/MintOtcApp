@@ -36,6 +36,10 @@ import ProfileTwo from '@screens/profileTwo';
 import MyProfileScreen from '@screens/myProfileScreen';
 import EditMyProfileScreen from '@screens/editMyProfileScreen';
 import MyBalancesScreen from '@screens/myBalancesScreen';
+import TransferEachOtherScreen from '@screens/transferEachOtherScreen';
+import CongratulationsScreen from '@screens/congratulationsScreen';
+import BlockedUserScreen from '@screens/blockedUserScreen';
+import PaymentMethodScreen from '@screens/paymentMethodScreen';
 
 function DetailsScreen() {
   return (
@@ -283,6 +287,38 @@ export default function App() {
           options={{
             drawerLabel: 'My Balance',
             headerTitle: 'My Balance',
+          }}
+        />
+        <Drawer.Screen
+          name="TransferEachOtherScreen"
+          component={TransferEachOtherScreen}
+          options={{
+            drawerLabel: 'Transfer Each Other',
+            headerTitle: 'Transfer Each Other',
+          }}
+        />
+        <Drawer.Screen
+          name="CongratulationsScreen"
+          component={CongratulationsScreen}
+          options={{
+            drawerLabel: 'Congratulations',
+            headerTitle: 'Congratulations',
+          }}
+        />
+        <Drawer.Screen
+          name="BlockedUserScreen"
+          component={BlockedUserScreen}
+          options={{
+            drawerLabel: 'Blocked User',
+            headerTitle: 'Blocked User',
+          }}
+        />
+        <Drawer.Screen
+          name="PaymentMethodScreen"
+          component={PaymentMethodScreen}
+          options={{
+            drawerLabel: 'Payment Method',
+            headerTitle: 'Payment Method',
           }}
         />
 

@@ -13,6 +13,7 @@ const appColors = {
   success: '#0CBC8B',
   border: '#f4f6f9',
   border_2: '#e2e2e2',
+  border_3: '#F5F5F5',
   textInput: '#F7F8F8',
   textInput_2: '#F5F5F5',
   lightBg: '#F2F9FC',
