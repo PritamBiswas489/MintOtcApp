@@ -40,6 +40,11 @@ import TransferEachOtherScreen from '@screens/transferEachOtherScreen';
 import CongratulationsScreen from '@screens/congratulationsScreen';
 import BlockedUserScreen from '@screens/blockedUserScreen';
 import PaymentMethodScreen from '@screens/paymentMethodScreen';
+import AddBankTransferScreen from '@screens/addBankTransferScreen';
+import SecurityCenterScreen from '@screens/securityCenterScreen';
+import FundPasswordScreen from '@screens/fundPasswordScreen';
+import MyAdsScreen from '@screens/myAdsScreen';
+import AboutUsScreen from '@screens/aboutUsScreen';
 
 function DetailsScreen() {
   return (
@@ -319,6 +324,46 @@ export default function App() {
           options={{
             drawerLabel: 'Payment Method',
             headerTitle: 'Payment Method',
+          }}
+        />
+        <Drawer.Screen
+          name="AddBankTransferScreen"
+          component={AddBankTransferScreen}
+          options={{
+            drawerLabel: 'Add Bank Transfer',
+            headerTitle: 'Add Bank Transfer',
+          }}
+        />
+        <Drawer.Screen
+          name="SecurityCenterScreen"
+          component={SecurityCenterScreen}
+          options={{
+            drawerLabel: 'Security Center',
+            headerTitle: 'Security Center',
+          }}
+        />
+        <Drawer.Screen
+          name="FundPasswordScreen"
+          component={FundPasswordScreen}
+          options={{
+            drawerLabel: 'Fund Password',
+            headerTitle: 'Fund Password',
+          }}
+        />
+        <Drawer.Screen
+          name="MyAdsScreen"
+          component={MyAdsScreen}
+          options={{
+            drawerLabel: 'My Ads',
+            headerTitle: 'My Ads',
+          }}
+        />
+        <Drawer.Screen
+          name="AboutUsScreen"
+          component={AboutUsScreen}
+          options={{
+            drawerLabel: 'About Us',
+            headerTitle: 'About Us',
           }}
         />
 
